@@ -155,6 +155,7 @@ nav.scrolled{background:rgba(15,15,20,.92);backdrop-filter:blur(20px);border-bot
 .port-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
 .port-tag{display:inline-flex;align-items:center;font-size:.58rem;padding:2px 8px;border-radius:20px;font-weight:600;letter-spacing:.04em;background:rgba(232,184,75,.18);border:1px solid rgba(232,184,75,.4);color:var(--gold)}
 .port-tag-teal{background:rgba(45,212,191,.15)!important;border:1px solid rgba(45,212,191,.4)!important;color:var(--teal)!important}
+.port-tag-purple{background:rgba(155,39,175,.2)!important;border:1px solid rgba(155,39,175,.45)!important;color:#c060d8!important}
 .nf-arrow{position:absolute;top:38%;transform:translateY(-50%);background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.2);color:white;font-size:1rem;width:34px;height:34px;border-radius:50%;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;z-index:5}
 .nf-arrow:hover{background:rgba(255,255,255,.2)}
 .nf-arrow-right{right:6px}
@@ -206,14 +207,14 @@ nav.scrolled{background:rgba(15,15,20,.92);backdrop-filter:blur(20px);border-bot
 /* ═══ FREE PREVIEW + CALL ═══ */
 #free-preview{background:var(--dark3);border-top:2px solid rgba(232,184,75,.16);padding:72px 0}
 .fp-two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;max-width:860px;margin:0 auto}
-.preview-form-card{background:#f5f0e8;border-top:4px solid var(--gold);border-radius:18px;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,.4)}
-.pf-fields{padding:22px 26px 26px;display:flex;flex-direction:column;gap:14px}
+.preview-form-card{background:linear-gradient(160deg,#e6fffe 0%,#ccfaf6 100%);border-top:4px solid var(--teal);border-radius:18px;overflow:hidden;box-shadow:0 16px 50px rgba(45,212,191,.2),0 4px 24px rgba(0,0,0,.3);height:100%;display:flex;flex-direction:column}
+.pf-fields{padding:22px 26px 26px;display:flex;flex-direction:column;gap:14px;flex:1}
 .pf-group{display:flex;flex-direction:column;gap:5px}
-.pf-label{font-size:.76rem;font-weight:600;color:#2a1f10}
-.pf-input{background:white;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;padding:10px 12px;font-size:.82rem;color:#1a1208;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;width:100%}
-.pf-input:focus{border-color:var(--pink)}
-.pf-success{padding:40px;text-align:center;background:#f5f0e8}
-.call-visual-card{background:var(--dark3);border:1px solid rgba(255,255,255,.08);border-top:4px solid var(--gold);border-radius:16px;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,.4);padding:24px}
+.pf-label{font-size:.76rem;font-weight:600;color:#1a1208}
+.pf-input{background:white;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;padding:10px 12px;font-size:.82rem;color:#1a1208;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.pf-input:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(232,51,109,.1)}
+.pf-success{text-align:center;flex:1;display:flex;align-items:stretch}
+.call-visual-card{background:linear-gradient(160deg,rgba(232,51,109,.03) 0%,rgba(155,39,175,.05) 50%,rgba(91,45,142,.04) 100%);border:1px solid rgba(200,80,180,.12);border-top:4px solid var(--pink);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(155,39,175,.08),0 4px 24px rgba(0,0,0,.2);padding:24px}
 .call-visual-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
 .call-visual-icon{font-size:1.6rem;width:44px;height:44px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .call-visual-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--text)}
@@ -333,6 +334,40 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 .cal-slot-day{width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.7rem;color:var(--muted);position:relative}
 .cal-slot-dot{width:4px;height:4px;border-radius:50%;background:var(--teal);position:absolute;bottom:3px}
 .cal-coming-soon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(15,15,20,.75);backdrop-filter:blur(4px);text-align:center;padding:16px}
+
+.hubspot-cal-wrap{margin-top:16px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.meetings-iframe-container{width:100%;min-height:360px}
+.meetings-iframe-container iframe{width:100%;border:none;min-height:360px;display:block}
+
+/* ── FREE PREVIEW THREE COL ── */
+.fp-three-col{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;max-width:860px;margin:0 auto}
+.fp-col{min-width:0;display:flex;flex-direction:column}
+.fp-or{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 20px;padding-top:52px;gap:10px}
+.fp-or-line{width:1px;flex:1;background:rgba(255,255,255,.12);max-height:80px}
+.fp-or-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:white;white-space:nowrap}
+.fp-bullets{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.fp-bullet{display:flex;align-items:flex-start;gap:10px;font-size:.82rem;color:#4a3820;line-height:1.5}
+.fp-bullet span:first-child{font-size:1rem;flex-shrink:0;margin-top:1px}
+.pf-divider{height:1px;background:rgba(0,0,0,.1);margin:14px 0}
+@media(max-width:900px){
+  .fp-three-col{grid-template-columns:1fr;gap:20px}
+  .fp-or{flex-direction:row;padding:0;padding-top:0;gap:14px;justify-content:center}
+  .fp-or-line{width:60px;height:1px;flex:none}
+  .fp-two-col{grid-template-columns:1fr}
+}
+
+/* Tags stacked: type / genres / land */
+.port-tags{display:flex;flex-direction:column;gap:4px;align-items:center}
+.port-tags-row{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+
+.pf-textarea{resize:vertical;min-height:80px;font-family:'Inter',sans-serif;line-height:1.5}
+.pf-link-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.pf-link-row:last-child{margin-bottom:0}
+.pf-link-row .pf-input{flex:1}
+.pf-add-link{width:28px;height:28px;border-radius:6px;background:var(--grad);border:none;color:white;font-size:1.1rem;font-weight:700;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.pf-add-link:hover{transform:scale(1.1)}
+.pf-success{background:linear-gradient(135deg,#e8336d,#9b27af,#5b2d8e) !important;border-radius:18px;overflow:hidden}
+.pf-success-inner{padding:40px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;width:100%;border-radius:18px}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YN8T57P50R"></script>
@@ -342,6 +377,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
   gtag('js', new Date());
   gtag('config', 'G-YN8T57P50R');
 </script>
+
 </head>
 <body>
 <!-- Cursor -->
@@ -469,15 +505,21 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="nf-track" id="nf-track">
         <div class="nf-card" data-url="https://boogielou.spotglow-studio.com/">
           <div class="nf-card-img"><img src="https://res.cloudinary.com/dvznmnpys/image/upload/v1774483700/Boogielou_voorbeeld_image_nepbnr.png" loading="lazy"><div class="nf-overlay"><span>Have a look</span></div></div>
-          <div class="nf-card-info"><div class="nf-name">Boogielou</div><div class="port-tags"><span class="port-tag">Electronic</span><span class="port-tag">House</span><span class="port-tag port-tag-teal">DJ</span></div></div>
+          <div class="nf-card-info"><div class="nf-name">Boogielou</div><div class="port-tags"><div class="port-tags-row"><span class="port-tag port-tag-teal">DJ</span></div>
+<div class="port-tags-row"><span class="port-tag">Electronic</span><span class="port-tag">House</span></div>
+<div class="port-tags-row"><span class="port-tag port-tag-purple">🇬🇧 UK</span></div></div></div>
         </div>
         <div class="nf-card" data-url="https://crooked-creek.spotglow-studio.com/">
           <div class="nf-card-img"><img src="https://res.cloudinary.com/dvznmnpys/image/upload/v1774397951/CrookedCreek_Example-image_xcvwnp.png" loading="lazy"><div class="nf-overlay"><span>Have a look</span></div></div>
-          <div class="nf-card-info"><div class="nf-name">Crooked Creek</div><div class="port-tags"><span class="port-tag">Country</span><span class="port-tag">Bluegrass</span><span class="port-tag port-tag-teal">Band</span></div></div>
+          <div class="nf-card-info"><div class="nf-name">Crooked Creek</div><div class="port-tags"><div class="port-tags-row"><span class="port-tag port-tag-teal">Band</span></div>
+<div class="port-tags-row"><span class="port-tag">Country</span><span class="port-tag">Bluegrass</span></div>
+<div class="port-tags-row"><span class="port-tag port-tag-purple">🇨🇦 Canada</span></div></div></div>
         </div>
         <div class="nf-card" data-url="http://dantiti.spotglow-studio.com/">
           <div class="nf-card-img"><img src="https://res.cloudinary.com/dvznmnpys/image/upload/v1774473526/Dantiti_Example-Image_ebinha.png" loading="lazy"><div class="nf-overlay"><span>Have a look</span></div></div>
-          <div class="nf-card-info"><div class="nf-name">Dantiti</div><div class="port-tags"><span class="port-tag">Afrobeat</span><span class="port-tag">World</span><span class="port-tag port-tag-teal">Solo Artist</span></div></div>
+          <div class="nf-card-info"><div class="nf-name">Dantiti</div><div class="port-tags"><div class="port-tags-row"><span class="port-tag port-tag-teal">Solo Artist</span></div>
+<div class="port-tags-row"><span class="port-tag">Afrobeat</span><span class="port-tag">World</span></div>
+<div class="port-tags-row"><span class="port-tag port-tag-purple">🇳🇬 Nigeria / 🇬🇧 UK</span></div></div></div>
         </div>
         <div class="nf-card" data-url="#free-preview">
           <div class="nf-card-img nf-cta-bg"><div class="nf-cta-inner"><span style="font-size:2rem">✨</span><div class="nf-cta-title">Your<br>website?</div><div class="nf-cta-sub">Request a free preview →</div></div><div class="nf-overlay"><span>Get started →</span></div></div>
@@ -595,70 +637,74 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 </section>
 
 <!-- FREE PREVIEW + CALL -->
-<section id="free-preview">
+<section id="free-preview" style="background:var(--dark3);border-top:2px solid rgba(232,184,75,.16);padding:72px 0">
   <div class="container">
-    <div class="reveal" style="text-align:center;margin-bottom:32px">
-      <div class="section-label">100% Free &mdash; No Strings Attached</div>
-      <h2>Request Your <span class="grad">Free Preview</span></h2>
-    </div>
-    <div class="fp-two-col reveal">
-      <div>
+    <div class="fp-three-col reveal">
+
+      <!-- LINKS: Free Preview -->
+      <div class="fp-col">
         <div class="preview-form-card">
           <div class="pf-fields" id="pf-fields">
-            <div class="pf-group"><label class="pf-label">Artist / Band Name</label><input type="text" class="pf-input" placeholder="e.g. Luna Avery"></div>
-            <div class="pf-group"><label class="pf-label">Email</label><input type="email" class="pf-input" placeholder="you@email.com"></div>
-            <div class="pf-group"><label class="pf-label">Instagram Link</label><input type="url" class="pf-input" placeholder="instagram.com/yourartist"></div>
-            <div class="pf-group"><label class="pf-label">Music Link <span style="color:#8a7050;font-weight:400">(Spotify, Bandcamp…)</span></label><input type="url" class="pf-input" placeholder="open.spotify.com/artist/..."></div>
-            <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;margin-top:6px" onclick="submitPreview()">✨ Request a free preview!</button>
-            <p style="text-align:center;font-size:.7rem;color:#8a7050;margin-top:6px">No payment, No commitment. Just a preview of what your website could look like. *Could be used as an example on our site</p>
+            <div style="margin-bottom:18px">
+              <h2 style="font-family:'Playfair Display',serif;font-weight:900;color:#1a1208;line-height:1.1;margin-bottom:0">Get Your<br><span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Free Preview</span></h2>
+            </div>
+            <div class="fp-bullets">
+              <div class="fp-bullet"><span>🚀</span><span>Get an idea of how your custom made artist website could look like</span></div>
+              <div class="fp-bullet"><span>👀</span><span>See before you buy (or not buy!)</span></div>
+            </div>
+            <div class="pf-divider"></div>
+            <div class="pf-group"><label class="pf-label">Artist / Band Name</label><input id="pf-name" type="text" class="pf-input" placeholder=""></div>
+            <div class="pf-group"><label class="pf-label">Email</label><input id="pf-email" type="email" class="pf-input" placeholder=""></div>
+            <div class="pf-group">
+              <label class="pf-label">Social Link(s)</label>
+              <div id="pf-social-links">
+                <div class="pf-link-row"><input type="url" class="pf-input pf-social-link" placeholder=""><button type="button" class="pf-add-link" onclick="addSocialLink()" title="Add another link">+</button></div>
+              </div>
+            </div>
+            <div class="pf-group">
+              <label class="pf-label">Music Link(s)</label>
+              <div id="pf-music-links">
+                <div class="pf-link-row"><input type="url" class="pf-input pf-music-link" placeholder=""><button type="button" class="pf-add-link" onclick="addMusicLink()" title="Add another link">+</button></div>
+              </div>
+            </div>
+            <div class="pf-group"><label class="pf-label">Anything else? <span style="color:#8a7050;font-weight:400;font-size:.7rem">(Your story, vision, goals or any questions?)</span></label><textarea id="pf-message" class="pf-input pf-textarea" placeholder=""></textarea></div>
+            <button class="btn-primary" style="width:100%;justify-content:center;padding:13px;margin-top:6px" onclick="submitPreview()">✨ Request a free preview!</button>
+            <p style="text-align:center;font-size:.68rem;color:#8a7050;margin-top:6px">No payment, No commitment. Just a preview of what your website could look like. *Could be used as an example on our site</p>
           </div>
           <div class="pf-success" id="pf-success" style="display:none">
-            <div style="font-size:2rem;margin-bottom:12px">🎉</div>
-            <h3 style="color:#1a1208;margin-bottom:6px">Preview request received!</h3>
-            <p style="color:#6b5c40;font-size:.82rem">We'll build your preview and send it within 48 hours.</p>
+            <div class="pf-success-inner">
+              <div style="font-size:2.5rem;margin-bottom:16px">✨</div>
+              <h2 style="font-family:'Playfair Display',serif;font-weight:900;color:white;margin-bottom:14px;line-height:1.2">Got it! ✨</h2>
+              <p style="color:rgba(255,255,255,.9);font-size:.9rem;line-height:1.7;margin-bottom:12px">We're excited to create your preview. You'll hear from us within 48 hours.</p>
+              <p style="color:rgba(255,255,255,.75);font-size:.82rem;line-height:1.7">Keep an eye on your inbox<br>(and spam folder just in case 👀)</p>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="call-visual-card">
-          <div class="call-visual-header">
-            <div class="call-visual-icon">📞</div>
-            <div>
-              <div class="call-visual-title">Free 30-min call</div>
-              <div class="call-visual-sub">Not sure what you need? Let us help!</div>
-            </div>
+
+      <!-- MIDDEN: Or -->
+      <div class="fp-or">
+        <div class="fp-or-line"></div>
+        <div class="fp-or-text">Or</div>
+        <div class="fp-or-line"></div>
+      </div>
+
+      <!-- RECHTS: Free Call -->
+      <div class="fp-col">
+        <div class="call-visual-card" style="height:100%;display:flex;flex-direction:column">
+          <div style="margin-bottom:18px">
+            <h2 style="font-family:'Playfair Display',serif;font-weight:900;color:var(--text);line-height:1.1">Get A<br><span class="grad">Free Call</span></h2>
           </div>
-          <div class="call-benefits">
-            <div class="call-benefit-item"><span>🎯</span><span>Our experts listen, advise and guide you in the right direction</span></div>
-            <div class="call-benefit-item"><span>✌️</span><span>No commitment required</span></div>
+          <div class="call-benefits" style="margin-bottom:20px">
+            <div class="call-benefit-item"><span>🎯</span><span>Clear strategy to grow your online presence</span></div>
+            <div class="call-benefit-item"><span>✌️</span><span>Free call, no strings attached</span></div>
           </div>
-          <div class="cal-placeholder">
-            <div class="cal-grid">
-              <div class="cal-header">
-                <span>◀</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:.8rem">April 2026</span><span>▶</span>
-              </div>
-              <div class="cal-days">Mo Tu We Th Fr Sa Su</div>
-              <div class="cal-slots">
-                <div class="cal-slot-day">7<div class="cal-slot-dot"></div></div>
-                <div class="cal-slot-day">8</div>
-                <div class="cal-slot-day">9<div class="cal-slot-dot"></div></div>
-                <div class="cal-slot-day">10<div class="cal-slot-dot"></div></div>
-                <div class="cal-slot-day">11</div>
-                <div class="cal-slot-day">14<div class="cal-slot-dot"></div></div>
-                <div class="cal-slot-day">15<div class="cal-slot-dot"></div></div>
-              </div>
-            </div>
-            <div class="cal-coming-soon">
-              <span>🗓️</span>
-              <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:.95rem;color:white">Coming Soon</div>
-              <div style="font-size:.72rem;color:var(--muted)">Online booking will be available here</div>
-            </div>
-          </div>
-          <div style="margin-top:16px">
-            <a href="https://calendly.com/spotglow-studio/30min" target="_blank" class="btn-primary" style="width:100%;justify-content:center">📞 Book Free Call</a>
+          <div class="hubspot-cal-wrap">
+            <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/spotglow?embed=true"></div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -736,7 +782,75 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el=>sio.observe(el))
 function toggleFaq(el){const item=el.parentElement,open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open');}
 
 // PREVIEW FORM
-function submitPreview(){document.getElementById('pf-fields').style.display='none';document.getElementById('pf-success').style.display='block';}
+function addMusicLink(){
+  const wrap=document.getElementById('pf-music-links');
+  const row=document.createElement('div');
+  row.className='pf-link-row';
+  row.innerHTML='<input type="url" class="pf-input pf-music-link" placeholder=""><button type="button" class="pf-add-link" onclick="this.parentElement.remove()" title="Remove">−</button>';
+  wrap.appendChild(row);
+}
+function addSocialLink(){
+  const wrap=document.getElementById('pf-social-links');
+  const row=document.createElement('div');
+  row.className='pf-link-row';
+  row.innerHTML='<input type="url" class="pf-input pf-social-link" placeholder="tiktok.com/@yourartist"><button type="button" class="pf-add-link" onclick="this.parentElement.remove()" title="Remove">−</button>';
+  wrap.appendChild(row);
+}
+
+// GOOGLE SHEETS ENDPOINT
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwiwf6y-wMf9xHga2hIQPqVq-8fxnV9XaTjtPEQuooKcNEDB2dcZmhNG9VJDhO1tv3C/exec';
+
+async function submitPreview(){
+  const name=document.getElementById('pf-name').value.trim();
+  const email=document.getElementById('pf-email').value.trim();
+  const message=document.getElementById('pf-message').value.trim();
+  const socialLinks=[...document.querySelectorAll('.pf-social-link')].map(i=>i.value.trim()).filter(Boolean);
+  const musicLinks=[...document.querySelectorAll('.pf-music-link')].map(i=>i.value.trim()).filter(Boolean);
+
+  if(!name||!email){
+    alert('Please fill in your name and email!');
+    return;
+  }
+
+  // Detecteer device type
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+  const device = isMobile ? 'Mobile' : 'Desktop';
+  const browser = (()=>{
+    const ua=navigator.userAgent;
+    if(ua.includes('Chrome')&&!ua.includes('Edg'))return'Chrome';
+    if(ua.includes('Safari')&&!ua.includes('Chrome'))return'Safari';
+    if(ua.includes('Firefox'))return'Firefox';
+    if(ua.includes('Edg'))return'Edge';
+    return'Other';
+  })();
+  const screenSize = window.innerWidth+'x'+window.innerHeight;
+
+  // Haal geo-data op (hergebruik ipapi.co dat al in de pagina zit)
+  let country='Unknown', city='Unknown', countryCode='';
+  try {
+    const geo = await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)});
+    const gd = await geo.json();
+    country = gd.country_name || 'Unknown';
+    city = gd.city || 'Unknown';
+    countryCode = gd.country_code || '';
+  } catch(e){}
+
+  // Toon success scherm
+  document.getElementById('pf-fields').style.display='none';
+  document.getElementById('pf-success').style.display='flex';
+
+  // Stuur alles naar Google Apps Script
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, socialLinks, musicLinks, message, device, browser, screenSize, country, city, countryCode })
+    });
+  } catch(err){
+    console.log('Sheets error:', err);
+  }
+}
 
 // NAV
 function toggleMenu(){
@@ -973,5 +1087,7 @@ const balkObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInte
 })();
 
 </script>
+<!-- HubSpot Meetings Embed -->
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 </body>
 </html>
